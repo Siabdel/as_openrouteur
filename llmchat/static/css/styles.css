@@ -473,7 +473,8 @@ body {
 }
 
 /* Disable text selection in certain elements */
-.bubble-actions button {
+.bubble-actions button,
+.file-attachment .remove-file {
     user-select: none;
 }
 
@@ -516,4 +517,25 @@ body {
     border-radius: 4px;
     font-size: 0.85rem;
     margin-bottom: 8px;
+}
+
+/* Error Message with Retry Button */
+.error-message {
+    background-color: #fee2e2;
+    border: 1px solid #ef4444;
+    color: #b91c1c;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 20px;
+    max-width: 85%;
+}
+
+.error-message .retry-btn {
+    font-size: 0.85rem;
+    padding: 0.25rem 0.5rem;
+}
+
+.error-message .retry-btn:hover {
+    background-color: #dc2626;
+    border-color: #b91c1c;
 }

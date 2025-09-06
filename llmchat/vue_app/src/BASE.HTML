@@ -1,0 +1,11 @@
+
+<!-- Dans base.html -->
+{% block extra_js %}
+<script src="{% static 'js/vue-app.js' %}"></script>
+<script>
+  // Variables globales accessibles à Vue
+  window.DJANGO_STATIC_URL = "{% static '' %}";
+  window.DJANGO_USER_ID = "{{ request.user.id|default:0 }}";
+  window.DJANGO_USERNAME = "{{ request.user.username|default:'guest' }}";
+</script>
+{% endblock %}

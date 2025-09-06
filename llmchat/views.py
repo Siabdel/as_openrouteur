@@ -28,3 +28,4 @@ def chat_api(request):
         response = requests.post("https://openrouter.ai/api/v1/chat/completions", headers=headers, json=data)
         answer = response.json()["choices"][0]["message"]["content"]
         return JsonResponse({"response": answer})
+
